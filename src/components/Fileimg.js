@@ -29,11 +29,11 @@ import React, { useState } from "react";
         <h5>
           <i className="bi bi-arrow-left"></i> Create Invoice
         </h5>
-        <div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+        <div className="col-lg-12 col-sm-12 col-xs-12 col-md-12 d-flex flex-column overflow-hidden">
           {!logoFile && (
             <div
               style={{ height: "100px" }}
-              className="text-center border border-primary rounded"
+              className="text-center border border-primary rounded "
             >
               <label
                 htmlFor="fileInput"
