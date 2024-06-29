@@ -9,7 +9,7 @@
   }
   
   .header_box {
-    background-color: #FAF9Fb;
+    background-color: #faf9fc;
     height: 100%;
     width: 100%;
     color: black;
@@ -20,17 +20,17 @@
   }
   
   main {
-    width: calc(100% - 200px); /* Adjusted width for main content */
+    width: calc(100% - 200px); 
     padding: 0px;
-    margin-left: 200px; /* Match the sidebar width */
+    margin-left: 200px; 
   }
   
   .sidebar {
     background: rgb(255, 255, 255);
-    height: 100vh; /* Full height */
+    height: 100vh; 
     width: 200px;
     border: 1px solid rgb(247, 247, 250);
-    z-index: 1; /* Ensure the sidebar is on top */
+    z-index: 1; 
     transition: width 0.3s;
     position: fixed;
   }
@@ -61,7 +61,7 @@
   }
   
   .links_list {
-    list-style: none; /* Remove default list styling */
+    list-style: none; 
     padding: 0;
   }
   
@@ -95,18 +95,18 @@
   /* Responsive styles */
   @media (max-width: 768px) {
     .containers {
-      flex-direction: column; /* Stack sidebar on top of main content */
+      flex-direction: column; 
     }
   
     .sidebar {
-      width: 50px; /* Collapsed width */
-      height: 100vh; /* Full height */
-      z-index: 1; /* Ensure it's on top */
+      width: 50px; 
+      height: 100vh;
+      z-index: 1; 
     }
     
     main {
-      width: calc(100% - 50px); /* Adjust main content width for collapsed sidebar */
-      margin-left: 50px; /* Match the collapsed sidebar width */
+      width: calc(100% - 50px); 
+      margin-left: 50px; 
     }
     
     .sidebar .top_section {
@@ -119,15 +119,15 @@
     }
     
     .link_text {
-      display: none; /* Hide text on smaller screens */
+      display: none; 
     }
     
     .sidebar.expanded {
-      width: 200px; /* Expanded width on click */
+      width: 200px; 
     }
     
     .sidebar.expanded .link_text {
-      display: block; /* Show text when expanded */
+      display: block; 
     }
 
     
@@ -136,14 +136,14 @@
   
   @media (max-width: 576px) {
     .sidebar {
-      width: 50px; /* Collapsed width */
-      height: 100vh; /* Full height */
-      z-index: 1; /* Ensure it's on top */
+      width: 50px; 
+      height: 100vh; 
+      z-index: 1; 
     }
     
     main {
-      width: calc(100% - 50px); /* Adjust main content width for collapsed sidebar */
-      margin-left: 50px; /* Match the collapsed sidebar width */
+      width: calc(100% - 50px); 
+       margin-left: 50px; 
     }
     
     .sidebar .top_section {
@@ -156,15 +156,15 @@
     }
     
     .link_text {
-      display: none; /* Hide text on smaller screens */
+      display: none; 
     }
     
     .sidebar.expanded {
-      width: 150px; /* Expanded width on click */
+      width: 150px; 
     }
     
     .sidebar.expanded .link_text {
-      display: block; /* Show text when expanded */
+      display: block;
     }
      
   }
