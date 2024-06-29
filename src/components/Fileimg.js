@@ -1,26 +1,33 @@
 import React, { useState } from "react";
 
-export const File_img = () => {
+
+
+ const Fileimg = () => {
   const [logoFile, setLogoFile] = useState(null);
   const [error, setError] = useState("");
 
   const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0];
+    const file = event.target.files[0];
+    if (file) {
+      
+      if (file.size > 5 * 1024 * 1024) {
+        setError('Max File Size 5MB.');
+        return;
+      }
 
-    if (selectedFile && selectedFile.type.startsWith("image/")) {
-      setLogoFile(selectedFile);
-      setError("");
+    
+      setLogoFile(file);
+      setError('');
     } else {
-      setLogoFile(null);
-      setError("Only Image File...Logo !!");
+      setError('No file selected.');
     }
   };
 
   return (
     <>
-      <div className="row daii">
+      <div className="row">
         <h5>
-          <i className="bi bi-arrow-left"></i> Create invoice
+          <i className="bi bi-arrow-left"></i> Create Invoice
         </h5>
         <div className="col-lg-12 col-sm-12 col-xs-12 col-md-12">
           {!logoFile && (
@@ -38,8 +45,10 @@ export const File_img = () => {
                   style={{ fontSize: "24px", marginBottom: "5px" }}
                 ></i>
                 <br />
+                Max.file Size 5MB
+                <br/>
                 Drag & Drop your file or{" "}
-                <span className="text-primary">Browser</span>
+                <span className="text-primary">Browse</span>
               </label>
               <input
                 id="fileInput"
@@ -65,3 +74,4 @@ export const File_img = () => {
     </>
   );
 };
+export default Fileimg;

@@ -13,14 +13,14 @@ const TopNav = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link" href="#"><i className="bi bi-bell"></i></a>
+          <a className="nav-link" href="/"><i className="bi bi-bell"></i></a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#"><i className="bi bi-gear"></i></a>
+          <a className="nav-link" href="/"><i className="bi bi-gear"></i></a>
         </li>
         <hr />
         <li className="nav-item">
-          <a className="nav-link" href="#"><i className="bi bi-person-circle"></i>Slico Design</a>
+          <a className="nav-link" href="/"><i className="bi bi-person-circle"></i>Slico Design</a>
         </li>
       </ul>
     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TopNav from '../components/TopNav';
-import { File_img } from './File_img';
-import Cus_Date from './Cus_Date';
+import Fileimg from './Fileimg';
+import Cusdate from './Cusdate';
 import Product from './Product';
 import ProductView from './ProductView';
 import Footer from './Footer';
@@ -74,8 +74,8 @@ const SideNav = () => {
       <main>
        <TopNav/>
        <div className="conatiner p-5 mt-5 mb-5 ms-5 me-5" style={{backgroundColor: 'rgb(255, 255, 255)'}}>
-        <File_img/>
-        <Cus_Date/>
+        <Fileimg/>
+        <Cusdate/>
         <Product/>
         <ProductView/>
        </div>
