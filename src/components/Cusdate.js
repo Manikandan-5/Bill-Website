@@ -6,7 +6,6 @@ const Cusdate = () => {
 
   return (
     <>
-    
     <div className="row mt-3">
       <div className=" col-lg-4 col-md-3">
       <label  >Customer_Name</label>

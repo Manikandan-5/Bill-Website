@@ -73,7 +73,7 @@ const Total = ({ netAmount }) => {
             </textarea>
           </div>
         </div>
-        <div className="col-lg-6 col-md-6">
+        <div className="col-lg-6 col-md-6 table-responsive">
           <table className="table table-primary table-borderless p-2">
             <tbody>
               <tr>
