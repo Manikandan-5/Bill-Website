@@ -5,11 +5,7 @@ import ProductView from '../components/ProductView';
 import Total from './Total';
 
 const Product = () => {
-  const [products, setProducts] = useState([
-    { name: 'Product 1', quantity: 1, unitPrice: 10, netAmount: 10.0 },
-    { name: 'Product 2', quantity: 2, unitPrice: 15, netAmount: 25.0 },
-  
-  ]);
+  const [products, setProducts] = useState([]);
    const formik = useFormik({
     initialValues: {
       name: '',
@@ -55,9 +51,6 @@ const Product = () => {
     updatedProducts.splice(index, 1);
     setProducts(updatedProducts);
   };
-  if (!products || products.length === 0) {
-    return <p>No products available</p>;
-  }
 
   return (
     <>
@@ -109,7 +102,6 @@ const Product = () => {
           </div>
         </div>
       </form>
-
       <div className="mt-4 table-responsive">
         <table className="table">
           <thead>

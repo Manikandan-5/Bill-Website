@@ -3,7 +3,7 @@ import jsPDF from "jspdf";
 import { toast } from "react-toastify";
 
 const Total = ({ netAmount }) => {
-  const [discount, setDiscount] = useState(5);
+  const [discount, setDiscount] = useState(0);
 
   const handleDiscountChange = (e) => {
     const { value } = e.target;
@@ -12,8 +12,8 @@ const Total = ({ netAmount }) => {
     }
   };
 
-  const generatePDF = (e) => {
-    e.preventDefault();
+  const generatePDF = () => {
+ 
     const doc = new jsPDF();
     const date = new Date().toLocaleDateString();
 
@@ -163,8 +163,15 @@ const Total = ({ netAmount }) => {
             <button
               type="submit"
               className="btn btn-primary ps-4 pe-4"
-              onClick={generatePDF}
-            >
+              onClick={() => {
+                const discountedNetAmount = (netAmount - netAmount * (discount / 100)).toFixed(2);
+                if (discountedNetAmount !== "0.00") {
+                  generatePDF();
+                }
+                else{
+                  toast.warn("No Amount!!")
+                }
+              }}>
               Pdf
             </button>
           </div>
