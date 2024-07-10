@@ -97,7 +97,7 @@ const Product = () => {
           </div>
           <div className="col-lg-2 col-md-3">
             <button className="btn-primary btn mt-lg-4 mt-md-4" type="submit">
-              Submit
+              + Add to Bill
             </button>
           </div>
         </div>
